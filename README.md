@@ -16,5 +16,3 @@ python rnn.py --hidden_dim 64 --epochs 10 --train_data training.json --val_data 
 ## Files
 - ffnn.py: Feedforward Neural Network
 - rnn.py: Recurrent Neural Network
-- training.json, validation.json, test.json: Yelp review data
-- word_embedding.pkl: Pretrained word embeddings (required for RNN)
