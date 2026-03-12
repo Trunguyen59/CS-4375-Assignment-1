@@ -1,21 +1,20 @@
-# starter code
+# CS4375 Sentiment Analysis
 
-Add the corresponding (one) line under the ``[to fill]`` in ``def forward()`` of the class for ffnn.py and rnn.py
+FFNN and RNN models for 5-class sentiment analysis on Yelp reviews.
 
-Feel free to modify other part of code, they are just for your reference.
+## Requirements
+pip install torch tqdm numpy
 
----
+## Usage
 
-One example on running the code:
+**FFNN:**
+python ffnn.py --hidden_dim 50 --epochs 5 --train_data training.json --val_data validation.json
 
-**FFNN**
+**RNN:**
+python rnn.py --hidden_dim 64 --epochs 10 --train_data training.json --val_data validation.json
 
-``python ffnn.py --hidden_dim 10 --epochs 1 ``
-``--train_data ./training.json --val_data ./validation.json``
-
-
-**RNN**
-
-``python rnn.py --hidden_dim 32 --epochs 10 ``
-``--train_data training.json --val_data validation.json``
-
+## Files
+- ffnn.py: Feedforward Neural Network
+- rnn.py: Recurrent Neural Network
+- training.json, validation.json, test.json: Yelp review data
+- word_embedding.pkl: Pretrained word embeddings (required for RNN)
